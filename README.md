@@ -20,12 +20,16 @@ function test()
     Provides a benchmark comparison of HDF5 performance and
     also describes general workflow of how to use the other functions. Read it
     first to understand.
+
 function createHdf5(filename, dsetname, dim, bufLength, fileLength)
     Creates a file with single dataset and a bunch of metadata attributes.
     File and dataset are closed after creation.
+
 function [ fileID, datasetID ] = openHdf5(filename, dsetname)
     Opens and existing database, sets up global counters and buffers.
+
 function appendHdf5( datasetID, dat )
     Appends dat to the dataset. Uses a buffer to speed up things.
+
 function closeHdf5( filename, fileID, datasetID)
     Saves remaining stuff in the buffer and closes the dataset and file.
